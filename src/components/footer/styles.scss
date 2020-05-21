@@ -1,0 +1,99 @@
+@import "../layout.scss";
+
+.footer-container {
+  @include flex-center;
+  height: 400px;
+  @media (max-width: 768px) {
+    height: 840px;
+  }
+  .footer-wrapper {
+    width: 1239px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .logo-col {
+      width: 210px;
+      margin: 0 auto;
+      @media (max-width: 768px) {
+        padding-bottom: 70px;
+      }
+      @media (max-width: 576px) {
+        padding-bottom: 68px;
+      }
+    }
+    .description-col {
+      @include flex-center;
+      width: 654px;
+      height: 185px;
+      background-color: #000;
+      color: #fff;
+      font-size: 20px;
+      line-height: 30px;
+      padding: 0 2rem;
+      @media (max-width: 1024px) {
+        padding: 0 1.5rem;
+        line-height: 24px;
+        font-size: 18px;
+      }
+      @media (max-width: 768px) {
+        width: 562px;
+        padding: 2rem;
+        font-size: 20px;
+      }
+      @media (max-width: 576px) {
+        width: 344px;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 1rem;
+      }
+    }
+    .links-col {
+      text-align: center;
+      font-size: 20px;
+      line-height: 46px;
+      color: #000;
+      @media (max-width: 768px) {
+        text-align: center;
+        padding: 3rem 0;
+      }
+      @media (max-width: 576px) {
+        padding: 2rem 0;
+      }
+    }
+    .social-col {
+      text-align: center;
+      padding: 0;
+      .social-title {
+        font-size: 20px;
+        line-height: 46px;
+        color: #000;
+        @media (max-width: 576px) {
+          display: none;
+          line-height: 30px;
+        }
+      }
+      .social-images {
+        padding: 0 4px;
+        @media (max-width: 1024px) {
+          padding: 0 2px;
+        }
+        @media (max-width: 576px) {
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+}
+.copy-rights {
+  @include flex-x-center;
+  margin: 0 auto;
+  color: #000;
+  line-height: 90px;
+  font-size: 20px;
+  @media (max-width: 576px) {
+    margin-top: -2rem;
+  }
+}

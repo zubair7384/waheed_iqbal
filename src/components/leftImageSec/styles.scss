@@ -1,0 +1,83 @@
+@import "../../components/layout.scss";
+
+// Great Ux Styles
+.great-ux-container {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1024px) {
+    height: 600px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 10rem;
+  }
+  @media (max-width: 576px) {
+    height: 470px;
+    margin-top: 0;
+  }
+  background-color: #fff;
+  .great-ux-wrapper {
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .great-ux-image-col {
+      padding-left: 0;
+      @media (max-width: 768px) {
+        @include flex-x-center;
+        padding-right: 0;
+      }
+      .ux-image {
+        width: 850px;
+        height: 556px;
+        @media (max-width: 1366px) {
+          width: 650px;
+          height: 446px;
+        }
+        @media (max-width: 1024px) {
+          width: 500px;
+          height: 346px;
+        }
+        @media (max-width: 768px) {
+          width: 684px;
+          height: 450px;
+        }
+        @media (max-width: 576px) {
+          width: 354px;
+          height: 246px;
+        }
+      }
+    }
+    .great-ux-text-col {
+      padding-top: 4rem;
+      @media (max-width: 1024px) {
+        padding-top: 2rem;
+      }
+      @media (max-width: 576px) {
+        padding: 2rem 0;
+      }
+      .great-ux-text {
+        width: 85%;
+        line-height: 90px;
+        text-align: end;
+        margin: 0 auto;
+        @media (max-width: 1366px) {
+          width: 90%;
+          line-height: 66px;
+          font-size: 40px;
+        }
+        @media (max-width: 1024px) {
+          line-height: 55px;
+          font-size: 32px;
+        }
+        @media (max-width: 768px) {
+          margin: 0 auto;
+          text-align: center;
+        }
+        @media (max-width: 576px) {
+          line-height: 40px;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

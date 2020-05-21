@@ -1,0 +1,32 @@
+// Global scss
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fcfdf5 !important;
+  margin: 0;
+}
+.bold {
+  font-weight: bold;
+}
+.bg-primary {
+  background-color: #fff !important;
+}
+
+// Variables scss
+$primary-color: "#FFF";
+$secondary-color: black !important;
+$font-large: 96px;
+
+// Mixins scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-x-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-y-center {
+  display: flex;
+  align-items: center;
+}

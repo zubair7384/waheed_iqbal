@@ -1,0 +1,50 @@
+@import "../../components/layout.scss";
+
+// Real Marketing Container Styles
+.real-marketing-container {
+  max-width: 1255px;
+  @include flex-center;
+  max-width: 1270px;
+  background: #fcfdf5;
+  height: 700px;
+  @media (max-width: 768px) {
+    height: 850px;
+  }
+  @media (max-width: 576px) {
+    height: 650px;
+  }
+  .real-marketing-wrapper {
+    .real-marketing-col {
+      @include flex-y-center;
+      .real-marketing-text {
+        font-size: 75px;
+        line-height: 99px;
+        text-align: end;
+        color: #000;
+        @media (max-width: 768px) {
+          padding-top: 1rem;
+          font-size: 50px;
+          line-height: 80px;
+          text-align: center;
+        }
+        @media (max-width: 576px) {
+          line-height: 59px;
+          font-size: 40px;
+          padding-top: 3rem;
+        }
+      }
+    }
+    .real-marketing-logo-col {
+      @include flex-y-center;
+      .real-marketing-image {
+        width: 470px;
+        @media (max-width: 576px) {
+          width: 343px;
+        }
+      }
+      @media (max-width: 768px) {
+        @include flex-x-center;
+      }
+    }
+  }
+}

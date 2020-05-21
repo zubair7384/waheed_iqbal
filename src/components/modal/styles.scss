@@ -1,0 +1,16 @@
+.modal {
+  display: flex !important;
+  align-items: center !important;
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        border: none !important;
+      }
+      .modal-body {
+        @media (max-width: 576px) {
+          margin-top: -2rem;
+        }
+      }
+    }
+  }
+}

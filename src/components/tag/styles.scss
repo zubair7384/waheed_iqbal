@@ -1,0 +1,11 @@
+.tag {
+  background: #e5e6de;
+  border: navajowhite;
+  padding: 7px 28px;
+  border-radius: 20px;
+  font-size: 19px;
+  text-transform: uppercase;
+  &:focus {
+    outline: none;
+  }
+}

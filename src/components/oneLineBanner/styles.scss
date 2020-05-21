@@ -1,0 +1,13 @@
+@import "../../components/layout.scss";
+
+.relevant-contant-container {
+  text-align: center;
+  background: #f4f4ef;
+  height: 274px;
+  @include flex-center;
+  @media (max-width: 576px) {
+    .relevant-contant {
+      padding: 0 2.5rem;
+    }
+  }
+}

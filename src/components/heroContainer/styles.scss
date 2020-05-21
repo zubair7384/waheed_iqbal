@@ -1,0 +1,67 @@
+@import "../layout.scss";
+
+// hero container Styles
+.hero-container {
+  max-width: 1255px ;
+  background-color: #fcfdf5;
+  margin-top: 137px;
+  @media (max-width: 1024px) {
+    margin-top: 4rem;
+  }
+
+  .hero-wrapper {
+    padding-bottom: 86px;
+    @media (max-width: 1024px) {
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .hero-text,
+    .hero-image {
+      margin-top: 55px;
+      @media (max-width: 768px) {
+        margin-bottom: 0;
+      }
+      img {
+        width: 650px;
+        height: 650px;
+        padding-left: 16px;
+        @media (max-width: 1024px) {
+          padding-left: 0;
+          width: 728px;
+          height: 728px;
+        }
+        @media (max-width: 576px) {
+          width: 310px;
+          height: 310px;
+        }
+      }
+      @media (max-width: 576px) {
+        margin-top: 63px;
+      }
+    }
+    .hero-image {
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .hero-text {
+      margin-top: 76px;
+      font-size: 69px;
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 3rem auto;
+        text-align: center;
+        font-size: 96px;
+      }
+      @media (max-width: 576px) {
+        font-size: 45px;
+        margin: 23px auto;
+      }
+    }
+  }
+}

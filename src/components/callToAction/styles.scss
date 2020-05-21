@@ -1,0 +1,36 @@
+@import "../layout.scss";
+
+.call-to-action-container {
+  @include flex-center;
+  height: 682px;
+  background: #000;
+  @media (max-width: 768px) {
+    margin: 10rem auto;
+  }
+  @media (max-width: 576px) {
+    height: 420px;
+    margin: 1rem auto;
+  }
+  .call-to-action-wrapper {
+    @include flex-y-center;
+    flex-direction: column;
+    .h2 {
+      font-size: 50px;
+      text-align: center;
+      color: #fff;
+      @media (max-width: 576px) {
+        font-size: 38px;
+        line-height: 55px;
+        width: 96%;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+    }
+    .call-to-action-button {
+      margin-top: 95px;
+      @media (max-width: 576px) {
+        margin-top: 38px;
+      }
+    }
+  }
+}

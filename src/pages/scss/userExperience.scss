@@ -1,0 +1,166 @@
+@import "../../components/layout.scss";
+
+// Data UX Styles
+.data-ux-container {
+  height: 750px;
+  @include flex-center;
+  background-color: #fff;
+  @media (max-width: 1024px) {
+    height: 600px;
+  }
+  @media (max-width: 576px) {
+    margin-top: 0;
+  }
+  .data-ux-wrapper {
+    overflow: hidden;
+    height: 583px;
+    @media (max-width: 1024px) {
+      height: 450px;
+    }
+    @media (max-width: 768px) {
+      height: 793px;
+      flex-direction: column-reverse;
+    }
+    .data-ux-image-col {
+      @media (max-width: 1024px) {
+        height: 450px;
+      }
+
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ededed+4,f6f6f6+22,f6f6f6+22,ffffff+42,ffffff+99 */
+      background: rgb(237, 237, 237); /* Old browsers */
+      background: -moz-linear-gradient(
+        left,
+        rgba(237, 237, 237, 1) 4%,
+        rgba(246, 246, 246, 1) 22%,
+        rgba(246, 246, 246, 1) 22%,
+        rgba(255, 255, 255, 1) 42%,
+        rgba(255, 255, 255, 1) 99%
+      ); /* FF3.6-15 */
+      background: -webkit-linear-gradient(
+        left,
+        rgba(237, 237, 237, 1) 4%,
+        rgba(246, 246, 246, 1) 22%,
+        rgba(246, 246, 246, 1) 22%,
+        rgba(255, 255, 255, 1) 42%,
+        rgba(255, 255, 255, 1) 99%
+      ); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(
+        to right,
+        rgba(237, 237, 237, 1) 4%,
+        rgba(246, 246, 246, 1) 22%,
+        rgba(246, 246, 246, 1) 22%,
+        rgba(255, 255, 255, 1) 42%,
+        rgba(255, 255, 255, 1) 99%
+      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+      @include flex-center;
+      padding-right: 0;
+      transform: skewX(-40deg);
+      overflow: hidden;
+      @media (max-width: 768px) {
+        transform: skewX(0deg);
+        transform: skewY(7deg);
+        padding-left: 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e2e2e2+0,d1d1d1+0,fefefe+97,fefefe+100 */
+        background: rgb(226, 226, 226); /* Old browsers */
+        background: -moz-linear-gradient(
+          bottom,
+          rgba(226, 226, 226, 1) 0%,
+          rgba(209, 209, 209, 1) 0%,
+          rgba(254, 254, 254, 1) 97%,
+          rgba(254, 254, 254, 1) 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          bottom,
+          rgba(226, 226, 226, 1) 0%,
+          rgba(209, 209, 209, 1) 0%,
+          rgba(254, 254, 254, 1) 97%,
+          rgba(254, 254, 254, 1) 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to top,
+          rgba(226, 226, 226, 1) 0%,
+          rgba(209, 209, 209, 1) 0%,
+          rgba(254, 254, 254, 1) 97%,
+          rgba(254, 254, 254, 1) 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+      }
+      .ux-image {
+        transform: skewX(40deg);
+        width: 630px;
+        height: 365px;
+        @media (max-width: 1366px) {
+          width: 460px;
+          height: 265px;
+        }
+        @media (max-width: 1024px) {
+          width: 400px;
+          height: 221px;
+        }
+        @media (max-width: 768px) {
+          transform: skewX(0deg);
+          transform: skewY(-7deg);
+        }
+        @media (max-width: 576px) {
+          width: 314px;
+          height: 181px;
+        }
+      }
+    }
+    .data-ux-text-col {
+      padding-top: 4rem;
+      @media (max-width: 1024px) {
+        padding-top: 2rem;
+      }
+      @media (max-width: 576px) {
+        padding: 2rem 0;
+      }
+      .data-ux-text {
+        width: 83%;
+        line-height: 90px;
+        text-align: start;
+        margin: 0 auto;
+        @media (max-width: 1366px) {
+          width: 89%;
+          line-height: 66px;
+          font-size: 40px;
+        }
+        @media (max-width: 1024px) {
+          width: 95%;
+          line-height: 55px;
+          font-size: 32px;
+          padding-top: 5rem;
+        }
+        @media (max-width: 768px) {
+          margin: 0 auto;
+          text-align: center;
+        }
+        @media (max-width: 576px) {
+          line-height: 40px;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+// Call to Action Styles
+
+.call-to-action-ux {
+  padding: 6rem 0;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+  @media (max-width: 576px) {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+.call-to-action-ux-two {
+  padding-top: 6rem;
+  @media (max-width: 576px) {
+    padding-top: 0;
+  }
+}

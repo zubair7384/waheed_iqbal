@@ -1,0 +1,7 @@
+.heading-two {
+  font-size: 50px;
+  color: #000;
+  @media (max-width: 576px) {
+    font-size: 35px;
+  }
+}

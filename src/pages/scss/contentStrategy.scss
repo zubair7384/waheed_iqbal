@@ -1,0 +1,9 @@
+@import "../../components/layout.scss";
+
+// Relevant Content
+.relevant-contant-container {
+  text-align: center;
+  background: #f4f4ef;
+  height: 274px;
+  @include flex-center;
+}

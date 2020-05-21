@@ -1,0 +1,128 @@
+@import "../layout.scss";
+
+.header {
+  @include flex-x-center;
+}
+.nav-wrapper {
+  @include flex-center;
+  margin: 0 auto;
+  @media (max-width: 1280px) {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.custom-nav {
+  position: fixed !important;
+  top: -1px;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+  height: 116px;
+  margin: 0;
+  padding: 0 !important;
+  box-shadow: 0px 2px 15px 0px rgba(123, 120, 120, 0.5);
+  .navbar-collapse {
+    @media (max-width: 1280px) {
+      @include flex-x-center;
+      align-items: flex-start;
+      position: absolute;
+      top: 98px;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      z-index: 9;
+      padding-top: 4rem;
+    }
+  }
+  .nav-item {
+    @media (max-width: 1024px) {
+      margin: 0.5rem 0;
+    }
+    .nav-link {
+      display: inline;
+      position: relative;
+      overflow: hidden;
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      .active {
+        color: #636363;
+      }
+    }
+  }
+  .nav-link:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50px;
+    right: 100%;
+    bottom: -5px;
+    background: #000;
+    height: 4px;
+    transition-property: left right;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+  .nav-link:hover:after,
+  .nav-link:focus:after,
+  .nav-link:active:after {
+    right: 0;
+  }
+  .nav-link {
+    color: $secondary-color;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 12px 12px 2px 12px !important;
+    @media (max-width: 1280px) {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    @media (max-width: 1024px) {
+      font-size: 60px;
+    }
+    @media (max-width: 576px) {
+      font-size: 36px;
+    }
+  }
+  .navbar-brand {
+    @media (max-width: 1280px) {
+      padding-left: 36px;
+    }
+    img {
+      @media (max-width: 576px) {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+  .toggler {
+    display: none;
+    @media (max-width: 1200px) {
+      display: block;
+    }
+    @media (max-width: 1280px) {
+      padding-right: 36px;
+    }
+  }
+  .navbar-nav {
+    @media (max-width: 1280px) {
+      @include flex-y-center;
+    }
+  }
+  .social-icons {
+    @include flex-y-center;
+    margin-left: 25px;
+    img {
+      margin: 0 6px;
+    }
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+  @media (max-width: 1280px) {
+    width: 100%;
+    height: 100px;
+  }
+}
