@@ -4,6 +4,8 @@
   @include flex-x-center;
 }
 .nav-wrapper {
+  max-width: 1255px;
+  margin: 0;
   @include flex-center;
   margin: 0 auto;
   @media (max-width: 1280px) {
@@ -22,6 +24,8 @@
   padding: 0 !important;
   box-shadow: 0px 2px 15px 0px rgba(123, 120, 120, 0.5);
   .navbar-collapse {
+    display: flex;
+    justify-content: space-evenly;
     @media (max-width: 1280px) {
       @include flex-x-center;
       align-items: flex-start;
@@ -39,12 +43,17 @@
       margin: 0.5rem 0;
     }
     .nav-link {
+      margin-right: 3.5rem;
       display: inline;
       position: relative;
       overflow: hidden;
+      @media (max-width: 1024px) {
+        margin: 0 auto;
+      }
       a {
         color: #000;
         text-decoration: none;
+        font-size: 25px;
       }
       .active {
         color: #636363;
@@ -91,6 +100,8 @@
       padding-left: 36px;
     }
     img {
+      height: 60px;
+      width: 60px;
       @media (max-width: 576px) {
         width: 52px;
         height: 52px;
@@ -107,19 +118,32 @@
     }
   }
   .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
     @media (max-width: 1280px) {
       @include flex-y-center;
     }
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
   }
-  .social-icons {
-    @include flex-y-center;
-    margin-left: 25px;
-    img {
-      margin: 0 6px;
-    }
-    @media (max-width: 1280px) {
-      display: none;
-    }
+  // .social-icons {
+  //   @include flex-y-center;
+  //   margin-left: 25px;
+  //   img {
+  //     margin: 0 6px;
+  //   }
+  //   @media (max-width: 1280px) {
+  //     display: none;
+  //   }
+  // }
+  .contact-button {
+    background: black;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 32px;
   }
   @media (max-width: 1280px) {
     width: 100%;
