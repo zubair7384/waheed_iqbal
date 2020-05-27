@@ -23,6 +23,7 @@
     .logo-image {
       @media (max-width: 576px) {
         width: 50px;
+        margin: 0.6rem;
       }
     }
   }
@@ -138,6 +139,7 @@
       .profile-image {
         @media (max-width: 576px) {
           width: 190px;
+          height: 190px;
         }
       }
     }

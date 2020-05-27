@@ -11,8 +11,8 @@ import {
 } from "reactstrap";
 import Logo from "../../assets/Home/logo.png";
 import Twitter from "../../assets/Home/twitter.png";
-import Linkedin from "../../assets/Home/link.png";
 import Facebook from "../../assets/Home/fb.png";
+import Linkedin from "../../assets/Home/link.png";
 import Toggler from "../../assets/Home/hbm.png";
 import Close from "../../assets/Home/cross.png";
 import "./styles.scss";

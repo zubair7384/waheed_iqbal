@@ -1,29 +1,29 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
-import "bootstrap/dist/css/bootstrap.min.css"
-import H2 from "../components/h2"
-import CallToAction from "../components/callToAction"
-import CustomButton from "../components/button"
-import HeroContainer from "../components/heroContainer"
-import ImageTextBanner from "../components/imageTextBanner"
-import CustomModal from "../components/modal"
-import ContactForm from "../components/contactForm"
-import Tag from "../components/tag"
-import { Container, Row, Col } from "reactstrap"
-import HomeImage from "../assets/Home/homeheroimage.png"
-import GoogleAds from "../assets/Home/logo1.png"
-import GoogleAnalytics from "../assets/Home/logo2.png"
-import GoogleTagManager from "../assets/Home/logo3.png"
-import SBuffer from "../assets/Home/logo4.png"
-import FacebookAds from "../assets/Home/logo5.png"
-import TwitterAds from "../assets/Home/logo6.png"
-import QuoteLogo from "../assets/Home/quote.png"
-import RealMarketing from "../assets/Home/real.png"
-import ProfileImage from "../assets/Home/waheed-iqbal.png"
-import SearchEngineOptimization from "../assets/Home/seo.png"
-import UserExperience from "../assets/Home/ux.png"
-import AdvertisingDesign from "../assets/Home/advertising.png"
-import "./scss/home.scss"
+import React, { useState } from "react";
+import Layout from "../components/layout";
+import "bootstrap/dist/css/bootstrap.min.css";
+import H2 from "../components/h2";
+import CallToAction from "../components/callToAction";
+import CustomButton from "../components/button";
+import HeroContainer from "../components/heroContainer";
+import ImageTextBanner from "../components/imageTextBanner";
+import CustomModal from "../components/modal";
+import ContactForm from "../components/contactForm";
+import Tag from "../components/tag";
+import { Container, Row, Col } from "reactstrap";
+import HomeImage from "../assets/Home/homeheroimage.png";
+import GoogleAds from "../assets/Home/logo1.png";
+import GoogleAnalytics from "../assets/Home/logo2.png";
+import GoogleTagManager from "../assets/Home/logo3.png";
+import SBuffer from "../assets/Home/logo4.png";
+import FacebookAds from "../assets/Home/logo5.png";
+import TwitterAds from "../assets/Home/logo6.png";
+import QuoteLogo from "../assets/Home/quote.png";
+import RealMarketing from "../assets/Home/real.png";
+import ProfileImage from "../assets/Home/waheed-iqbal.png";
+import SearchEngineOptimization from "../assets/Home/seo.png";
+import UserExperience from "../assets/Home/ux.png";
+import AdvertisingDesign from "../assets/Home/advertising.png";
+import "./scss/home.scss";
 
 const imageArray = [
   GoogleAds,
@@ -32,7 +32,7 @@ const imageArray = [
   SBuffer,
   FacebookAds,
   TwitterAds,
-]
+];
 
 const seoArray = [
   {
@@ -49,10 +49,10 @@ const seoArray = [
     link: AdvertisingDesign,
     text: "Advertising Design",
   },
-]
+];
 
 const IndexPage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Layout>
       <HeroContainer
@@ -61,13 +61,13 @@ const IndexPage = () => {
         text="is the new mainstream"
       />
       <Container fluid className="logos-container">
-        <Row className="logos-wrapper">
+        <div className="logos-wrapper">
           {imageArray.map((image, index) => (
             <Col key={index} className={`logos logo-${index}`}>
               <img className="logo-image" src={image} alt={image} />
             </Col>
           ))}
-        </Row>
+        </div>
       </Container>
       <Container className="quote-container">
         <Row className="quote-wrapper">
@@ -136,7 +136,7 @@ const IndexPage = () => {
             "ppc",
             "email",
             "analytics",
-          ].map(i => (
+          ].map((i) => (
             <Tag label={i} />
           ))}
         </div>
@@ -146,6 +146,6 @@ const IndexPage = () => {
         buttonText="CONTACT PERHAPS?"
       />
     </Layout>
-  )
-}
-export default IndexPage
+  );
+};
+export default IndexPage;

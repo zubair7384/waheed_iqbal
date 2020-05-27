@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import Instagram from "../../assets/Home/instagram-logo.png";
-import Watsapp from "../../assets/Home/watsapp-logo.png";
 import Linkedin from "../../assets/Home/linkedin-logo.png";
 import Medium from "../../assets/Home/medium-logo.png";
+import Twitter from "../../assets/Home/twitter.png";
+import Facebook from "../../assets/Home/fb.png";
 
 import "./styles.scss";
 
@@ -29,7 +29,7 @@ export default function () {
           </Col>
           <Col className="social-col">
             <p className="social-title">FOLLOW ME</p>
-            {[Linkedin, Instagram, Watsapp, Medium].map((i, index) => (
+            {[Linkedin, Facebook, Twitter, Medium].map((i, index) => (
               <img className="social-images" src={i} alt={i} />
             ))}
           </Col>
