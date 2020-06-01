@@ -30,32 +30,21 @@
       }
     }
   }
-  .logo-4 {
-    @media (max-width: 1024px) {
-      padding-left: 15px;
-    }
-    @media (max-width: 576px) {
-      padding-left: 2rem;
-    }
-    // .logos {
-    //   @media (max-width: 1024px) {
-    //     margin: 3rem;
-    //   }
-    //   @media (max-width: 768px) {
-    //     // width: 209px;
-    //   }
-    //   @media (max-width: 576px) {
-    //     width: 209px;
-    //   }
-    // }
-  }
-  .logo-4,
-  .logo-5 {
-    padding-top: 2rem;
-    @media (max-width: 576px) {
-      padding-top: 0;
-    }
-  }
+  // .logo-4 {
+  //   @media (max-width: 1024px) {
+  //     padding-left: 15px;
+  //   }
+  //   @media (max-width: 576px) {
+  //     padding-left: 2rem;
+  //   }
+  // }
+  // .logo-4,
+  // .logo-5 {
+  //   padding-top: 2rem;
+  //   @media (max-width: 576px) {
+  //     padding-top: 0;
+  //   }
+  // }
 }
 
 // Quote container Styles

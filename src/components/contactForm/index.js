@@ -1,75 +1,91 @@
-import React, { useState } from "react"
-import { Container, Row, Col } from "reactstrap"
-import Button from "../button"
-import axios from "axios"
-
-import "./styles.scss"
+import React, { useState } from "react";
+import { Container, Row, Col } from "reactstrap";
+import { AvForm, AvField } from "availity-reactstrap-validation";
+import Button from "../button";
+// import CustomModal from "../../components/modal";
+// import ContactForm from "../../components/contactForm";
+import emailjs from "emailjs-com";
+import "./styles.scss";
 
 export default function () {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-
-  async function handleSubmit(evt) {
-    alert("Your mail has been sent")
-    evt.preventDefault()
-    const form = await axios.post("/api/form", {
-      name,
-      email,
-      message,
-    })
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "gmail",
+        "waheedtamplate",
+        e.target,
+        "user_xT0ZxX445uX02kOFR7crE"
+      )
+      .then(
+        (result) => {
+          console.log("result", result.text);
+        },
+        (error) => {
+          console.log("error", error.text);
+        }
+      );
   }
 
   return (
     <Container>
       <Row>
         <Col className="contact-form">
-          <form onSubmit={handleSubmit}>
+          <AvForm onSubmit={sendEmail}>
             <div className="input-wrapper">
               <label className="form-label" for="fname">
                 Full Name
               </label>
-              <input
+              <AvField
                 className="form-input"
                 type="text"
                 id="fname"
-                name="firstname"
+                name="user_name"
                 placeholder="John Doe"
-                value={name}
-                onChange={e => setName(e.target.value)}
+                errorMessage="Please type your name"
+                validate={{
+                  required: { value: true },
+                  pattern: { value: "/^[A-Za-z]+$/" },
+                  minLength: { value: 6 },
+                  maxLength: { value: 16 },
+                }}
               />
             </div>
             <div className="input-wrapper">
               <label className="form-label" for="email">
                 Email
               </label>
-              <input
+              <AvField
                 className="form-input"
                 type="email"
                 id="email"
-                name="email"
+                name="user_email"
                 placeholder="johndoe@example.com"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                errorMessage="Please type a valid email"
+                validate={{ required: { value: true }, email: true }}
               />
             </div>
             <div className="input-wrapper">
               <label className="form-label" for="subject">
                 Message
               </label>
-              <textarea
+              <AvField
                 placeholder="Write your intro message here"
                 className="form-textarea"
-                id="noter-text-area"
-                name="textarea"
-                value={message}
-                onChange={e => setMessage(e.target.value)}
+                name="message"
+                id="message"
+                type="message"
+                maxlength="2500"
+                errorMessage="Please write your message"
+                validate={{
+                  required: { value: true },
+                }}
               />
             </div>
             <Button className="form-button" text="Submit" type="submit" />
-          </form>
+          </AvForm>
         </Col>
       </Row>
     </Container>
-  )
+  );
 }
