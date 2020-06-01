@@ -63,9 +63,7 @@ const IndexPage = () => {
       <Container fluid className="logos-container">
         <div className="logos-wrapper">
           {imageArray.map((image, index) => (
-            <Col key={index} className={`logos logo-${index}`}>
-              <img className="logo-image" src={image} alt={image} />
-            </Col>
+            <img className="logos" src={image} alt={image} />
           ))}
         </div>
       </Container>

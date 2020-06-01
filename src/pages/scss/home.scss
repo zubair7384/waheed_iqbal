@@ -9,21 +9,24 @@
     height: 373px;
   }
   @media (max-width: 576px) {
-    height: 273px;
+    height: 580px;
   }
   .logos-wrapper {
     @include flex-y-center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
     @media (max-width: 576px) {
-      height: 150px;
+      height: 602px;
     }
-  }
-  .logos {
-    text-align: center;
-    .logo-image {
+    .logos {
+      @media (max-width: 1024px) {
+      }
+      @media (max-width: 768px) {
+        margin: 3rem 0.6rem;
+      }
       @media (max-width: 576px) {
-        width: 50px;
-        margin: 0.6rem;
+        margin: 2rem 0.7rem;
       }
     }
   }
@@ -34,11 +37,17 @@
     @media (max-width: 576px) {
       padding-left: 2rem;
     }
-    .logo-image {
-      @media (max-width: 576px) {
-        width: 209px;
-      }
-    }
+    // .logos {
+    //   @media (max-width: 1024px) {
+    //     margin: 3rem;
+    //   }
+    //   @media (max-width: 768px) {
+    //     // width: 209px;
+    //   }
+    //   @media (max-width: 576px) {
+    //     width: 209px;
+    //   }
+    // }
   }
   .logo-4,
   .logo-5 {
