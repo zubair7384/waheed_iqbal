@@ -1,17 +1,17 @@
-import React from "react"
-import { Container, Row, Col } from "reactstrap"
-import Layout from "../components/layout"
-import HeroContainer from "../components/heroContainer"
-import CallToAction from "../components/callToAction"
-import LeftImageSec from "../components/leftImageSec"
-import RightImageSec from "../components/rightImageSec"
-import H2 from "../components/h2"
-import UserCentric from "../assets/UserExperience/user-centric-design.png"
-import Design from "../assets/UserExperience/design.png"
-import UniqueUx from "../assets/UserExperience/uniqueimage.png"
-import DataUx from "../assets/UserExperience/dataDrivenUx.png"
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import Layout from "../components/layout";
+import HeroContainer from "../components/heroContainer";
+import CallToAction from "../components/callToAction";
+import LeftImageSec from "../components/leftImageSec";
+import RightImageSec from "../components/rightImageSec";
+import H2 from "../components/h2";
+import UserCentric from "../assets/UserExperience/user-centric-design.webp";
+import Design from "../assets/UserExperience/ui-ux-design.webp";
+import UniqueUx from "../assets/UserExperience/user-experience-design.webp";
+import DataUx from "../assets/UserExperience/data-driven-ux-model.webp";
 
-import "./scss/userExperience.scss"
+import "./scss/userExperience.scss";
 
 export default function () {
   return (
@@ -59,5 +59,5 @@ export default function () {
         />
       </div>
     </Layout>
-  )
+  );
 }

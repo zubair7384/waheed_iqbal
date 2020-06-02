@@ -5,6 +5,9 @@
     .modal-content {
       .modal-header {
         border: none !important;
+        .close {
+          z-index: 999;
+        }
       }
       .modal-body {
         @media (max-width: 576px) {

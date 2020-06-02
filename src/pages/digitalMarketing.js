@@ -1,17 +1,17 @@
-import React from "react"
-import Layout from "../components/layout"
-import HeroContainer from "../components/heroContainer"
-import OneLineBanner from "../components/oneLineBanner"
-import RightImageSec from "../components/rightImageSec"
-import LeftImageSec from "../components/leftImageSec"
-import CallToAction from "../components/callToAction"
-import ImageTextBanner from "../components/imageTextBanner"
-import MarketingHomeImage from "../assets/digitalMarketing/digital-marketing-needs-patience.png"
-import Strategy from "../assets/digitalMarketing/Rectangle.png"
-import Devise from "../assets/digitalMarketing/dominos.png"
-import Complex from "../assets/digitalMarketing/digital-marketing-is-complex.png"
+import React from "react";
+import Layout from "../components/layout";
+import HeroContainer from "../components/heroContainer";
+import OneLineBanner from "../components/oneLineBanner";
+import RightImageSec from "../components/rightImageSec";
+import LeftImageSec from "../components/leftImageSec";
+import CallToAction from "../components/callToAction";
+import ImageTextBanner from "../components/imageTextBanner";
+import MarketingHomeImage from "../assets/digitalMarketing/digital-marketing-takes-time.webp";
+import Strategy from "../assets/digitalMarketing/what-audience-needs.webp";
+import Devise from "../assets/digitalMarketing/holistic-strategy.webp";
+import Complex from "../assets/digitalMarketing/digital-marketing-is-complex.webp";
 
-import "./scss/digitalMarketing.scss"
+import "./scss/digitalMarketing.scss";
 
 export default function () {
   return (
@@ -44,5 +44,5 @@ export default function () {
         buttonText="ask for more"
       />
     </Layout>
-  )
+  );
 }

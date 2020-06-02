@@ -10,19 +10,19 @@ import CustomModal from "../components/modal";
 import ContactForm from "../components/contactForm";
 import Tag from "../components/tag";
 import { Container, Row, Col } from "reactstrap";
-import HomeImage from "../assets/Home/homeheroimage.png";
+import HomeImage from "../assets/Home/digital-is-the-new-mainstream.webp";
 import GoogleAds from "../assets/Home/logo1.png";
 import GoogleAnalytics from "../assets/Home/logo2.png";
 import GoogleTagManager from "../assets/Home/logo3.png";
 import SBuffer from "../assets/Home/logo4.png";
 import FacebookAds from "../assets/Home/logo5.png";
 import TwitterAds from "../assets/Home/logo6.png";
-import QuoteLogo from "../assets/Home/quote.png";
-import RealMarketing from "../assets/Home/real.png";
-import ProfileImage from "../assets/Home/waheed-iqbal.png";
-import SearchEngineOptimization from "../assets/Home/seo.png";
-import UserExperience from "../assets/Home/ux.png";
-import AdvertisingDesign from "../assets/Home/advertising.png";
+import QuoteLogo from "../assets/Home/quotes.webp";
+import RealMarketing from "../assets/Home/real-marketing-takes-time.webp";
+import ProfileImage from "../assets/Home/waheed-iqbal.webp";
+import SearchEngineOptimization from "../assets/Home/search-engine-optimization.svg";
+import UserExperience from "../assets/Home/user-experience-design.svg";
+import AdvertisingDesign from "../assets/Home/advertising-design.svg";
 import "./scss/home.scss";
 
 const imageArray = [
@@ -121,7 +121,7 @@ const IndexPage = () => {
         <Row className="seo-wrapper">
           {seoArray.map((i, index) => (
             <Col sm="12" lg="4" className="images-col" key={index}>
-              <img src={i.link} alt={i} />
+              <img classname="seo-image" src={i.link} alt={i} />
               <p className="images-title">{i.text}</p>
             </Col>
           ))}

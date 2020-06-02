@@ -1,17 +1,17 @@
-import React from "react"
-import Layout from "../components/layout"
-import HeroContainer from "../components/heroContainer"
-import RightImageSec from "../components/rightImageSec"
-import LeftImageSec from "../components/leftImageSec"
-import CallToAction from "../components/callToAction"
-import ImageTextBanner from "../components/imageTextBanner"
-import OneLineBanner from "../components/oneLineBanner"
-import UserFollow from "../assets/ContentStrategy/users-follow-great-content.png"
-import Attract from "../assets/ContentStrategy/attract.png"
-import ForUser from "../assets/ContentStrategy/content-for-user.png"
-import Creation from "../assets/ContentStrategy/content-creation-takes-effort.png"
+import React from "react";
+import Layout from "../components/layout";
+import HeroContainer from "../components/heroContainer";
+import RightImageSec from "../components/rightImageSec";
+import LeftImageSec from "../components/leftImageSec";
+import CallToAction from "../components/callToAction";
+import ImageTextBanner from "../components/imageTextBanner";
+import OneLineBanner from "../components/oneLineBanner";
+import UserFollow from "../assets/ContentStrategy/users-follow-great-content.webp";
+import Attract from "../assets/ContentStrategy/relevant-content.webp";
+import ForUser from "../assets/ContentStrategy/content-for-users.webp";
+import Creation from "../assets/ContentStrategy/content-creation-takes-time.webp";
 
-import "./scss/contentStrategy.scss"
+import "./scss/contentStrategy.scss";
 
 export default function () {
   return (
@@ -46,5 +46,5 @@ export default function () {
         buttonText="ask for more"
       />
     </Layout>
-  )
+  );
 }
