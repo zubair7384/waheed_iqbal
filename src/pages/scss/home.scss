@@ -182,7 +182,7 @@
     height: 1620px;
   }
   @media (max-width: 576px) {
-    height: 1377px;
+    height: 1222px;
   }
   .seo-title {
     font-size: 50px;
@@ -203,7 +203,10 @@
     margin: 0 auto;
     .images-col {
       img {
-        width: 250px !important;
+        width: 250px;
+        @media (max-width: 576px) {
+          width: 190px;
+        }
       }
       @media (max-width: 768px) {
         padding: 61px 0 118px 0;

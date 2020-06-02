@@ -33,6 +33,8 @@ const navLinks = [
   {
     link: "blog",
     label: "blog",
+    externalLink: "https://medium.com/digital-realm",
+    target: "_blank",
   },
 ];
 const Header = (props) => {
@@ -62,9 +64,15 @@ const Header = (props) => {
                 return (
                   <NavItem key={index}>
                     <NavLink>
-                      <Link activeClassName="active" to={i.link}>
-                        {i.label}
-                      </Link>
+                      {i.link === "blog" ? (
+                        <a href={i.externalLink} target={i.target}>
+                          {i.link}
+                        </a>
+                      ) : (
+                        <Link activeClassName="active" to={i.link}>
+                          {i.label}
+                        </Link>
+                      )}
                     </NavLink>
                   </NavItem>
                 );
@@ -74,6 +82,12 @@ const Header = (props) => {
                   <img key={index} src={social} alt={social} />
                 ))}
               </NavItem> */}
+              {/* <a
+                href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjayba4-uLpAhXwAmMBHT0ZAlQQPAgH"
+                target="_blank"
+              > */}
+              {/* BLOG */}
+              {/* </a> */}
               <Button
                 onClick={() => setIsModalOpen(!isModalOpen)}
                 text="Contact"
