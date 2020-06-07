@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import H2 from "../components/h2";
@@ -55,6 +56,19 @@ const IndexPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Layout>
+      <Helmet>
+        <title>
+          Digital Marketing is UX, Content, Advertising & SEO | Waheed Iqbal
+        </title>
+        <meta
+          name="description"
+          content="Let me redefine your digital marketing strategy, user experience & content strategy. I'll help you implement holistic digital marketing."
+        />
+        <meta
+          name="google-site-verification"
+          content="NdJqhcikKM_yUjHrNcT2OfWUxzuEIZEQjJk-Yezb4EY"
+        />
+      </Helmet>
       <HeroContainer
         src={HomeImage}
         boldText="digital"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 import HeroContainer from "../components/heroContainer";
 import RightImageSec from "../components/rightImageSec";
@@ -16,6 +17,16 @@ import "./scss/contentStrategy.scss";
 export default function () {
   return (
     <Layout>
+      <Helmet>
+        <title>
+          Focus on Content, Users will Follow | Content Strategy | Waheed Iqbal
+        </title>
+        <meta
+          name="description"
+          content="People always look for fresh content. Provide the content your audience needs. Let's reimagine your content strategy."
+        />
+      </Helmet>
+
       <HeroContainer
         src={UserFollow}
         text={

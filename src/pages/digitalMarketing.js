@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Layout from "../components/layout";
 import HeroContainer from "../components/heroContainer";
 import OneLineBanner from "../components/oneLineBanner";
@@ -16,6 +17,16 @@ import "./scss/digitalMarketing.scss";
 export default function () {
   return (
     <Layout>
+      <Helmet>
+        <title>
+          Digital Marketing Takes Time, Planning is Key | Waheed Iqbal
+        </title>
+        <meta
+          name="description"
+          content="Marketing takes time, even digital marketing. Figuring out the details of what to do & how to do it is essential. Let me redefine your digital marketing strategy."
+        />
+      </Helmet>
+
       <HeroContainer
         src={MarketingHomeImage}
         boldText="marketing"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Container, Row, Col } from "reactstrap";
 import Layout from "../components/layout";
 import HeroContainer from "../components/heroContainer";
@@ -16,6 +17,15 @@ import "./scss/userExperience.scss";
 export default function () {
   return (
     <Layout>
+      <Helmet>
+        <title>
+          Good UX is User-Centric Design | User Experience | Waheed Iqbal
+        </title>
+        <meta
+          name="description"
+          content="How to design for the user while reflecting your brand image? Make UX the attractive force in your digital marketing strategy."
+        />
+      </Helmet>
       <div className="bg-primary">
         <HeroContainer
           src={UserCentric}
