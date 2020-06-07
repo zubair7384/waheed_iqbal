@@ -68,7 +68,6 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-      script={[{ src: "http://url.com/script.js", type: "text/javascript" }]}
     />
   );
 }

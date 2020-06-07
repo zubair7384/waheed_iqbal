@@ -68,7 +68,6 @@ const IndexPage = () => {
           name="google-site-verification"
           content="NdJqhcikKM_yUjHrNcT2OfWUxzuEIZEQjJk-Yezb4EY"
         />
-        <script src="../components/gtm.js"></script>
       </Helmet>
       <HeroContainer
         src={HomeImage}
