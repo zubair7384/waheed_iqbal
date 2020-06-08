@@ -135,7 +135,7 @@ const IndexPage = () => {
         <Row className="seo-wrapper">
           {seoArray.map((i, index) => (
             <Col sm="12" lg="4" className="images-col" key={index}>
-              <img classname="seo-image" src={i.link} alt={i} />
+              <img className="seo-image" src={i.link} alt={i} />
               <p className="images-title">{i.text}</p>
             </Col>
           ))}

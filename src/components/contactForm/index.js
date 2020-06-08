@@ -1,6 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, UncontrolledAlert } from "reactstrap";
 import Button from "../button";
 import "./styles.scss";
 
@@ -10,6 +10,8 @@ class ContactForm extends React.Component {
     this.state = {
       fields: {},
       errors: {},
+      success: false,
+      danger: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,33 +26,6 @@ class ContactForm extends React.Component {
     this.setState({
       fields,
     });
-  }
-
-  submituserRegistrationForm(e) {
-    e.preventDefault();
-    if (this.validateForm()) {
-      let fields = {};
-      fields["user_name"] = "";
-      fields["user_email"] = "";
-      fields["message"] = "";
-      this.setState({ fields: fields });
-      alert("Form submitted");
-      emailjs
-        .sendForm(
-          "gmail",
-          "waheedtamplate",
-          e.target,
-          "user_xT0ZxX445uX02kOFR7crE"
-        )
-        .then(
-          (result) => {
-            console.log("result", result.text);
-          },
-          (error) => {
-            console.log("error", error.text);
-          }
-        );
-    }
   }
 
   validateForm() {
@@ -97,7 +72,42 @@ class ContactForm extends React.Component {
     return formIsValid;
   }
 
+  submituserRegistrationForm(e) {
+    let success = this.state.success;
+    let danger = this.state.danger;
+    e.preventDefault();
+    if (this.validateForm()) {
+      let fields = {};
+      fields["user_name"] = "";
+      fields["user_email"] = "";
+      fields["message"] = "";
+      this.setState({ fields: fields });
+      emailjs
+        .sendForm(
+          "gmail",
+          "waheedtamplate",
+          e.target,
+          "user_xT0ZxX445uX02kOFR7crE"
+        )
+        .then(
+          (result) => {
+            // setTimeout(function () {}, 3000);
+            this.setState({ success: true });
+            console.log(success, "success");
+            console.log("result", result.text);
+          },
+          (error) => {
+            this.setState({ danger: true });
+            console.log(danger, "danger");
+            console.log("error", error.text);
+          }
+        );
+    }
+  }
+
   render() {
+    let success = this.state.success;
+    let danger = this.state.danger;
     return (
       <Container>
         <Row>
@@ -107,6 +117,16 @@ class ContactForm extends React.Component {
               name="userRegistrationForm"
               onSubmit={this.submituserRegistrationForm}
             >
+              {success && (
+                <UncontrolledAlert color="success">
+                  Your message has been send
+                </UncontrolledAlert>
+              )}
+              {danger && (
+                <UncontrolledAlert color="danger">
+                  There was an error please try later
+                </UncontrolledAlert>
+              )}
               <div className="input-wrapper">
                 <label className="form-label" for="fname">
                   Full Name
@@ -116,7 +136,7 @@ class ContactForm extends React.Component {
                   type="text"
                   id="fname"
                   name="user_name"
-                  placeholder="John Doe"
+                  placeholder="Write your name"
                   value={this.state.fields.user_name}
                   onChange={this.handleChange}
                 />
@@ -131,7 +151,7 @@ class ContactForm extends React.Component {
                   type="email"
                   id="email"
                   name="user_email"
-                  placeholder="johndoe@example.com"
+                  placeholder="Write your email"
                   value={this.state.fields.user_email}
                   onChange={this.handleChange}
                 />

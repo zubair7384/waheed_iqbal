@@ -129,21 +129,17 @@
       padding: 0;
     }
   }
-  // .social-icons {
-  //   @include flex-y-center;
-  //   margin-left: 25px;
-  //   img {
-  //     margin: 0 6px;
-  //   }
-  //   @media (max-width: 1280px) {
-  //     display: none;
-  //   }
-  // }
   .contact-button {
     background: black;
     color: #fff;
     font-size: 20px;
     padding: 10px 32px;
+    @media (max-width: 1024px) {
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 576px) {
+      margin-top: 1.5rem;
+    }
     &:hover {
       background: black !important;
     }

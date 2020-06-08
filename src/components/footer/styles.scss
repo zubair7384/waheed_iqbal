@@ -74,11 +74,12 @@
       text-align: center;
       padding: 0;
       .social-title {
-        font-size: 20px;
+        font-size: 17px;
         line-height: 46px;
         color: #000;
         text-align: left;
-        padding-left: 6rem;
+        padding-left: 6.2rem;
+        margin-bottom: 0;
         @media (max-width: 576px) {
           display: none;
           line-height: 30px;
@@ -86,8 +87,8 @@
       }
       .social-images {
         cursor: pointer;
-        width: 50px;
-        padding: 0 4px;
+        width: 40px;
+        padding: 0 6px;
         @media (max-width: 1024px) {
           padding: 0 2px;
         }

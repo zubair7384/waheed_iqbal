@@ -77,17 +77,6 @@ const Header = (props) => {
                   </NavItem>
                 );
               })}
-              {/* <NavItem className="social-icons">
-                {[Twitter, Linkedin, Facebook].map((social, index) => (
-                  <img key={index} src={social} alt={social} />
-                ))}
-              </NavItem> */}
-              {/* <a
-                href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjayba4-uLpAhXwAmMBHT0ZAlQQPAgH"
-                target="_blank"
-              > */}
-              {/* BLOG */}
-              {/* </a> */}
               <Button
                 onClick={() => setIsModalOpen(!isModalOpen)}
                 text="Contact"
@@ -100,7 +89,6 @@ const Header = (props) => {
           modalBody={<ContactForm />}
           modalToggle={() => setIsModalOpen(!isModalOpen)}
           isModalOpen={isModalOpen}
-          // headerText="Contact"
         />
       </Navbar>
     </div>
