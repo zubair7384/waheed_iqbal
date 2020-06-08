@@ -78,11 +78,6 @@ class ContactForm extends React.Component {
     let danger = this.state.danger;
     e.preventDefault();
     if (this.validateForm()) {
-      let fields = {};
-      fields["user_name"] = "";
-      fields["user_email"] = "";
-      fields["message"] = "";
-      this.setState({ fields: fields });
       emailjs
         .sendForm(
           "gmail",
@@ -101,6 +96,11 @@ class ContactForm extends React.Component {
             }, 3000);
             console.log(success, "success");
             console.log("result", result.text);
+            let fields = {};
+            fields["user_name"] = "";
+            fields["user_email"] = "";
+            fields["message"] = "";
+            this.setState({ fields: fields });
           },
           (error) => {
             let closeModal = () => {
