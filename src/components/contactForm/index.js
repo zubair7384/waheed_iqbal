@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import emailjs from "emailjs-com";
 import { Container, Row, Col, UncontrolledAlert } from "reactstrap";
 import Button from "../button";
@@ -91,13 +92,24 @@ class ContactForm extends React.Component {
         )
         .then(
           (result) => {
-            // setTimeout(function () {}, 3000);
+            let closeModal = () => {
+              this.props.modalToggle();
+            };
             this.setState({ success: true });
+            setTimeout(function () {
+              closeModal();
+            }, 3000);
             console.log(success, "success");
             console.log("result", result.text);
           },
           (error) => {
+            let closeModal = () => {
+              this.props.modalToggle();
+            };
             this.setState({ danger: true });
+            setTimeout(function () {
+              closeModal();
+            }, 3000);
             console.log(danger, "danger");
             console.log("error", error.text);
           }
@@ -136,7 +148,7 @@ class ContactForm extends React.Component {
                   type="text"
                   id="fname"
                   name="user_name"
-                  placeholder="Write your name"
+                  placeholder="Type your name"
                   value={this.state.fields.user_name}
                   onChange={this.handleChange}
                 />
@@ -151,7 +163,7 @@ class ContactForm extends React.Component {
                   type="email"
                   id="email"
                   name="user_email"
-                  placeholder="Write your email"
+                  placeholder="Type your email"
                   value={this.state.fields.user_email}
                   onChange={this.handleChange}
                 />
@@ -162,7 +174,7 @@ class ContactForm extends React.Component {
                   Message
                 </label>
                 <input
-                  placeholder="Write your intro message here"
+                  placeholder="Type your intro message"
                   className="form-textarea"
                   name="message"
                   id="message"

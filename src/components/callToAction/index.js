@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import { Container, Row } from "reactstrap"
-import H2 from "../h2"
-import CustomButton from "../button"
-import CustomModal from "../modal"
-import ContactForm from "../contactForm"
-import "./styles.scss"
+import React, { useState } from "react";
+import { Container, Row } from "reactstrap";
+import H2 from "../h2";
+import CustomButton from "../button";
+import CustomModal from "../modal";
+import ContactForm from "../contactForm";
+import "./styles.scss";
 
 export default function CallToAction(props) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <Container fluid className={`call-to-action-container ${props.class}`}>
@@ -20,10 +20,10 @@ export default function CallToAction(props) {
         />
       </Row>
       <CustomModal
-        modalBody={<ContactForm />}
+        modalBody={<ContactForm modalToggle={() => setIsModalOpen(false)} />}
         modalToggle={() => setIsModalOpen(!isModalOpen)}
         isModalOpen={isModalOpen}
       />
     </Container>
-  )
+  );
 }

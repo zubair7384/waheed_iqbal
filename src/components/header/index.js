@@ -86,8 +86,8 @@ const Header = (props) => {
           </Collapse>
         </Container>
         <CustomModal
-          modalBody={<ContactForm />}
-          modalToggle={() => setIsModalOpen(!isModalOpen)}
+          modalBody={<ContactForm modalToggle={() => setIsModalOpen(false)} />}
+          modalToggle={() => setIsModalOpen(false)}
           isModalOpen={isModalOpen}
         />
       </Navbar>

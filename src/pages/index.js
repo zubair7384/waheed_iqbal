@@ -124,7 +124,9 @@ const IndexPage = () => {
             />
           </Col>
           <CustomModal
-            modalBody={<ContactForm />}
+            modalBody={
+              <ContactForm modalToggle={() => setIsModalOpen(false)} />
+            }
             modalToggle={() => setIsModalOpen(!isModalOpen)}
             isModalOpen={isModalOpen}
           />
