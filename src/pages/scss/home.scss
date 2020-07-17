@@ -52,7 +52,7 @@
   @include flex-center;
   max-width: 1238px;
   height: 600px;
-  background-color: #fcfdf5;
+  background-color: #fff;
   @media (max-width: 1024px) {
     padding: 0 3rem;
   }
@@ -176,7 +176,7 @@
 // SEO Container Styles
 .seo-container {
   height: 706px;
-  background: #fcfdf5;
+  background: #fff;
   text-align: center;
   @media (max-width: 768px) {
     height: 1620px;

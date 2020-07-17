@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import emailjs from "emailjs-com";
 import { Container, Row, Col, UncontrolledAlert } from "reactstrap";
 import Button from "../button";
